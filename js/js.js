@@ -27,6 +27,9 @@ document.querySelectorAll('.public-banner').length > 0 && new Swiper('.public-ba
 
 
 
+
+
+
 $('.mobile-menu-wrap').on('click', function () {
     $(this).children('.mobile-menu').toggleClass('active')
     $('.public-header_public_nav-right .list').slideToggle();
@@ -49,3 +52,19 @@ $('.public-header_public-nav').on('mouseleave', function () {
         $('.public-header_public_nav-right .list .menu-root .child-menu').hide();
     }
 })
+
+
+
+
+// $('.check-login  .pic input').on('change', function () {
+//     var url;
+//     $(this).parent().addClass('active');
+//     if (window.createObjectURL != undefined) { // basic
+//         url = window.createObjectURL(this.files[0]);
+//     } else if (window.URL != undefined) { // mozilla(firefox)
+//         url = window.URL.createObjectURL(this.files[0]);
+//     } else if (window.webkitURL != undefined) { // webkit or chrome
+//         url = window.webkitURL.createObjectURL(this.files[0]);
+//     }
+//     $('.check-login .pic img').attr('src', url);
+// });

@@ -1,3 +1,5 @@
+body
+    user-select none
 .public-header
     &_public-welcome
         height 55px
@@ -13,6 +15,10 @@
             display flex
             justify-content flex-start
             align-items center
+            @media(max-width 991px)
+                float left
+            @media(max-width 767px)
+                float right
             a
                 display block
                 padding 0 15px
@@ -32,30 +38,30 @@
                 border 1px solid #878787
                 border-radius 0
                 outline none
-            .lanuage
-                position relative
-                margin-left 40px
-                padding-right 25px
-                font-size 14px
-                color #666666
-                background  url('../img/e17d89ae21d826363dcbe8bf7b14a3f0-14+8.png') right center no-repeat
+    .lanuage
+        position relative
+        margin-left 40px
+        padding-right 25px
+        font-size 14px
+        color #666666
+        background  url('../img/e17d89ae21d826363dcbe8bf7b14a3f0-14+8.png') right center no-repeat
+        cursor pointer
+        .text
+            min-width 4em
+            text-transform capitalize
+        &_child-menu
+            display none
+            position absolute
+            left 0
+            right 0
+            z-index 1
+            text-align center
+            background #f5f5f5
+            span
+                display block
+                line-height 3
                 cursor pointer
-                .text
-                    min-width 4em
-                    text-transform capitalize
-                &_child-menu
-                    display none
-                    position absolute
-                    left 0
-                    right 0
-                    z-index 1
-                    text-align center
-                    background #f5f5f5
-                    span
-                        display block
-                        line-height 3
-                        cursor pointer
-                        text-transform capitalize
+                text-transform capitalize
     .public-header_public-nav
         .container
             display flex
@@ -316,6 +322,11 @@
         font-size 18px
         color #333333
         padding-bottom 10px
+    .pic
+        img
+            display block
+            width 100%
+            max-width 500px
     .sub-title
         font-size 20px
         color #333333
@@ -331,11 +342,18 @@
         border-bottom 1px solid #dadada 
         span
             float left
+            @media(max-width 767px)
+                width 50%
         a
             float left
             padding 10px 25px
             margin-right 50px
             transition 0.3s
+            @media(max-width 767px)
+                margin-right 0
+                width 100%
+                box-sizing border-box
+                text-align center
             &:hover
                 color #1357ac
     .title
@@ -343,8 +361,19 @@
         line-height 1
         font-size 36px
         color #1357ac
+    .table
+        width 100%
+        overflow scroll
+        &::-webkit-scrollbar
+            width 10px
+            height 10px
+        //     display none
+        &::-webkit-scrollbar-thumb
+            background rgb(204, 204, 204)
+            border-radius 5px
     .table-wrapper
         width 100%
+        min-width 992px
         tr
         th
         td
@@ -442,6 +471,8 @@
 .public-page-control
     display flex
     justify-content center
+    @media(max-width 767px)
+        flex-wrap wrap
     &.p50-0-80
         padding 50px 0 80px
     &.p50-0-50
@@ -462,6 +493,9 @@
         box-sizing border-box
         transition 0.3s
         text-align center
+        @media(max-width 767px)
+            margin-top 5px
+            margin-bottom 5px
     .hover
         &:hover
             color #ffffff
@@ -484,13 +518,24 @@
         padding 10px 0
         line-height 1
         border-bottom 1px solid #dadada 
+        @media(max-width 767px)
+            flex-wrap wrap
         span
             float left
+            @media(max-width 767px)
+                width 33.33%
+                text-align center
+                flex 0 0 33.33%
         a
             float left
             padding 10px 25px
             margin-right 50px
             transition 0.3s
+            @media(max-width 767px)
+                margin-right 0
+                padding 10px 0
+                float none
+                display block
             &:hover
             &.active
                 color #1357ac
@@ -501,6 +546,12 @@
             color #333333
             max-width 900px
             width 100%
+            @media(max-width 1199px)
+                max-width 80%
+            @media(max-width 767px)
+                flex 1
+                padding-top 20px
+                max-width 500px
             h3
                 padding-bottom 20px
                 width 100%
@@ -508,6 +559,8 @@
                 text-overflow ellipsis
                 white-space nowrap
                 transition 0.3s
+                @media(max-width 767px)
+                    padding-bottom 10px
             p
                 font-size 16px
                 color #8c8c8c
@@ -516,11 +569,21 @@
             flex 0 0 120px
             font-size 16px
             color #666666
+            @media(max-width 767px)
+                flex 1
+                width 100%
+                display flex
+                justify-content space-between
+                align-items center
+                max-width 500px
+                padding 10px 0 20px
             .date
                 padding-bottom 40px
                 font-size 16px
                 color #666666
                 text-align center
+                @media(max-width 767px)
+                    padding-bottom 0
             a
                 display block
                 margin 0 auto
@@ -531,12 +594,17 @@
                 color #ffffff
                 background #999999
                 transition 0.3s
+                @media(max-width 767px)
+                    margin 0
         .item
             display flex
             align-items center
             height 190px
             justify-content space-between
             border-bottom 1px solid #dcdcdc
+            @media(max-width 767px)
+                flex-direction column
+                height auto
             &:hover
                 h3
                     color #1357ac
@@ -548,9 +616,9 @@
         border 1px solid #e8e8e8
         background #fcfcfc
         h3
-            padding 10px 0
+            padding 40px 10px
             font-size 36px
-            line-height 100px 
+            line-height 1.5 
             color #333333
             text-align center
         .more-info
@@ -569,6 +637,9 @@
             font-size 18px
             color #717171
             line-height 40px
+            @media(max-width 768px)
+                padding-left 10px
+                padding-right 10px
         .page-conreol
             padding 60px
             display flex
@@ -576,11 +647,18 @@
             font-size 18px
             color #b6b6b6
             line-height 1
+            @media(max-width 767px)
+                flex-direction column
+                padding 10px
+                text-align center
             a
                 transition 0.3
+                @media(max-width 767px)
+                    margin 10px
                 &:hover
                     color #1357ac
 .main-about-mof
+    
     .tabs-control
         display flex
         justify-content center
@@ -589,16 +667,45 @@
         padding 10px 0
         line-height 1
         border-bottom 1px solid #dadada 
+        @media(max-width 767px)
+            flex-wrap wrap
         span
             float left
+            @media(max-width 767px)
+                width 33.33%
+                text-align center
+                flex 0 0 33.33%
         a
             float left
             padding 10px 25px
             margin-right 50px
             transition 0.3s
+            @media(max-width 767px)
+                margin-right 0
+                padding 10px 0
+                float none
+                display block
             &:hover
             &.active
                 color #1357ac
+    // .tabs-control
+    //     display flex
+    //     justify-content center
+    //     font-size 18px
+    //     color #616161
+    //     padding 10px 0
+    //     line-height 1
+    //     border-bottom 1px solid #dadada 
+    //     span
+    //         float left
+    //     a
+    //         float left
+    //         padding 10px 25px
+    //         margin-right 50px
+    //         transition 0.3s
+    //         &:hover
+    //         &.active
+    //             color #1357ac
     .about
         padding-bottom 100px
         p
@@ -608,6 +715,14 @@
             line-height 27px
         .pic
             padding 40px 0 40px 40px
+            @media(max-width 767px)
+                float none
+                padding 40px 0 0
+            img
+                max-width 500px
+                width 100%
+                display block
+                margin 0 auto
     .interest
         h3
             padding-top 34px
@@ -623,7 +738,16 @@
             margin 50px 10px
             border 1px solid #dddddd
             padding 3px
+            overflow scroll
+            &::-webkit-scrollbar
+                width 10px
+                height 10px
+            //     display none
+            &::-webkit-scrollbar-thumb
+                background rgb(204, 204, 204)
+                border-radius 5px
             table
+                min-width 992px
                 width 100%
                 tr
                 th
@@ -709,6 +833,9 @@
                         opacity 1
         .pic
             position relative
+            max-width 500px
+            width 100%
+            margin 0 auto
             img
                 display block
                 width 100%
@@ -777,11 +904,14 @@
                 display block
                 width 100%
                 max-width 410px
+                margin 0 auto
         h3
             font-size 30px
             color #454545
-            line-height 1
+            line-height 1.2
             font-weight bold
+            @media(max-width 991px)
+                padding-top 40px
         .cost
             padding 20px 0
             font-size 22px
@@ -818,6 +948,7 @@
                 color #5c5c5c
         .case-list
             padding 20px 0 20px 10px
+            
             a
                 float left
                 width 136px
@@ -828,6 +959,16 @@
                 text-align center
                 border 1px solid #acacac 
                 transition 0.3s
+                @media(max-width 767px)
+                    width 30%
+                    box-sizing border-box
+                    margin-left 0
+                    &:nth-child(n+1)
+                        margin-left 5%
+                    &:nth-child(n+4)
+                        margin-top 5%
+                    &:nth-child(3n+1)
+                        margin-left 0
                 &+a
                     margin-left 20px
                 &:hover
@@ -979,8 +1120,268 @@
                 padding 0
                     
                 
+.public-register
+    .public-header_public-nav
+        border-bottom 1px solid #ebebeb
+        .container
+            align-items center
+            @media(max-width 767px)
+                flex-direction column
+                height auto 
+        .public-header_public_nav-left
+            padding-bottom 0
+            display flex
+            align-items center
+            font-size 20px
+            color #666666
+            @media(max-width 767px)
+                width 100%
+                height 50px
+                .brand
+                    height 80%
+            .register-user
+                margin-left 20px
+                padding-left 30px
+                line-height 40px
+                height 40px
+                border-left 1px solid #ababab
+                @media(max-width 767px)
+                    height 30px
+                    line-height 30px
+        .public-header_public_nav-right
+            display flex
+            font-size 16px
+            @media(max-width 767px)
+                width 100%
+                height 50px
+                line-height 50px
+            .register-menu
+                margin-left 40px
+                @media(max-width 767px)
+                    margin-left 0
+                    &+.register-menu
+                        margin-left 10%
+            .lanuage
+                font-size 16px
+
+.main-register
+    .hot-user
+        padding 20px 0
+        line-height 2
+        font-size 16px
+        color #a6a6a6
+        text-align right
+        a
+            color #1357ac
+    .register-steps
+        overflow hidden
+        .steps
+            @media(max-width 767px)
+                display flex
+            &.steps-one
+                span
+                    &:nth-child(1)
+                        background #1357ac
+                        color #ffffff
+            &.steps-two
+                @media(max-width 767px)
+                    transform translateX(-150px)
+                span
+                    &:nth-child(2)
+                        background #1357ac
+                        color #ffffff
+            &.steps-three
+                @media(max-width 767px)
+                    transform translateX(-220px)
+                span
+                    &:nth-child(3)
+                        background #1357ac
+                        color #ffffff
+            &.steps-four
+                @media(max-width 767px)
+                    transform translateX(-220px)
+                span
+                    &:nth-child(3)
+                        background #1357ac
+                        color #ffffff
+        span
+            width 25%
+            min-width 150px
+            font-size 21px
+            color #666666
+            text-align center
+            line-height 60px
+            height 60px
+            background #f2f2f2
+            &.active
+                background #1357ac
+                color #ffffff
+    .mode
+        padding-bottom 100px
+        h3
+            padding 100px 0 40px
+            font-size 22px
+            line-height 1.5
+            color #666666
+            text-align center
+            font-weight bold
+        .btn-group
+            display flex
+            justify-content center
+            a
+                max-width 260px
+                width 100%
+                height 46px
+                background #666666
+                color #ffffff
+                font-size 18px
+                text-align center
+                line-height 46px
+                margin 0 20px
+                &+a
+                    background #1357ac
+    .user-info
+        padding 60px 0 40px
+        .item
+            display flex
+            justify-content center
+            margin-bottom 23px
+            @media(max-width 768px)
+                flex-direction column
+                max-width 500px
+                margin 0 auto
+            &.mb0
+                margin-bottom 0
+            &.mb50
+                margin-bottom 50px
+            .label
+            .content
+                max-width 350px
+                width 100%
+                line-height 46px
+            .label
+                padding-right 30px
+                text-align right
+                font-size 18px
+                color #666666
+                max-width 150px
+                @media(max-width 768px)
+                    text-align left
+                    padding-right 0
+                &.red
+                    &:before
+                        content '*'
+                        color #ff0000
+            .content
+                font-size 16px
+                color #999999
+                @media(max-width 768px)
+                    max-width 500px
+                    width 100%
+                select
+                input
+                    max-width 357px
+                    width 100%
+                    border 1px solid #999999
+                    height 46px
+                    box-sizing border-box
+                    padding 10px
+                    line-height 26px
+                    color #e5e5e5
+                    font-size 16px
+                    color #999999
+                    outline none
+                    border-radius 0
+                    appearance none
+                    @media(max-width 768px)
+                        max-width 500px
+                        width 100%
+                    &::placeholder
+                        color #999999
+                select 
+                    background url('../img/fc4a4259c508c3f7aebce4f38e14e297-16+10.png') right 20px center no-repeat
+                input[type=checkbox]
+                    width 17px
+                    height 17px
+                    padding 0
+                    border 1px solid #999999
+                    vertical-align middle
+                    margin-top -2px
+                    margin-right 10px
+                    &:checked
+                        background  url('../img/74c5a6311cf1b8342302abacbac0f18b-8+11.png') center center no-repeat
+                a
+                    color #1357ac
+                input[type=submit]
+                    margin-top 20px
+                    width 189px
+                    height 50px
+                    color #ffffff
+                    font-size 18px
+                    background #1357ac
+                    border none
+                    outline none
+                    &.mt0
+                        @media(min-width 768px)
+                            margin-top 0
+                .code
+                    width calc(100% - 110px)
+                .send-code
+                    float right 
+                    width 103px
+                    height 45px
+                    background #1357ac
+                    color #ffffff
+                    text-align center
+                    line-height 45px
+                    font-size 16px
+                .upload-pic
+                    width 550px
+                    @media(max-width 767px)
+                        width 100%
+                    .pic
+                        max-width 176px
+                        width 100%
+                        @media(max-width 767px)
+                            display block
+                            float none
+                            margin 0 auto
+                        img
+                            display block
+                            width 100%
+                    .content
+                        padding-left 40px
+                        width 300px
+                        @media(max-width 767px)
+                            padding-left 0
+                            float none
+                            width 100%
+                    input
+                        display none
+                    a
+                        display block
+                        width 104px
+                        height 34px
+                        font-size 1px
+                        color #666666
+                        line-height 34px
+                        background #f0f0f0
+                        text-align center
+                        border 1px solid #d0d0d0
+                    .w50
+                        max-width 260px
+                        a
+                            margin 20px auto 40px
+                    .w100
+                        padding-left 0
+                        max-width 100%
+                        width 100%
 
 
-// img/e2da88943ccc5627a9d0499f15d48b75-18+14.png
-// to
-// img/a1c6e7c7eff4f575b0c665bde9d8981b-18+14.png
+
+
+
+
+
+
+                    
