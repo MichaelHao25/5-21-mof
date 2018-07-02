@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>Bootstrap 101 Template</title>
     <script src="js/sc320.js"></script>
     <link href="css/bootstrap-grid-system.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common.css"> 	<!--[if lte IE 9]> <link rel="stylesheet" href="css/ie.css"> <![endif]-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,7 +25,7 @@
     <!-- <div class="container-fluid"></div> -->
     <header class="public-header public-register">
         <div class="public-header_public-nav">
-            <div class="container">
+            <div class="container clear">
                 <div class="public-header_public_nav-left">
                     <a href="#" class="brand">
                         <img src="img/e5299b9c46c0bbad1bcc43f998caa8f1-209+53.png" alt="">
@@ -34,7 +35,7 @@
                 <div class="public-header_public_nav-right">
                     <a href="#" class="register-menu">网站首页</a>
                     <a href="#" class="register-menu">个人中心</a>
-                    <div class="lanuage">
+                    <div class="lanuage ie9-mt30">
                         <div class="text">中文简体</div>
                         <div class="lanuage_child-menu">
                             <span>中文简体</span>
@@ -46,7 +47,7 @@
         </div>
     </header>
     <main class="main">
-        <div class="container">
+        <div class="container clear">
             <div class="main-register">
                 <div class="hot-user">已有账号？马上
                     <a href="#">登录</a>
@@ -62,43 +63,43 @@
                 <div class="user-info">
                     <div class="row">
                         <div class="col-xs-12">
-                                <div class="item">
-                                    <div class="label red">企业名称</div>
-                                    <div class="content">
-                                        <input type="text" placeholder="设置用户名">
-                                    </div>
+                            <div class="item">
+                                <div class="label red">企业名称</div>
+                                <div class="content">
+                                    <input type="text" placeholder="设置用户名">
                                 </div>
-                                <div class="item mb50">
-                                    <div class="label red">营业执照号</div>
-                                    <div class="content">
-                                        <input type="text" placeholder="输入你的登录密码">
-                                    </div>
+                            </div>
+                            <div class="item mb50">
+                                <div class="label red">营业执照号</div>
+                                <div class="content">
+                                    <input type="text" placeholder="输入你的登录密码">
                                 </div>
-                                <div class="item">
-                                    <div class="label red">上传资料</div>
-                                    <div class="content">
-                                        <div class="upload-pic clear">
-                                            <div class="pic fl">
-                                                <img src="img/b604d4d2b39540bfd2f2d74519e1d9c4-176+198.jpg" alt="">
-                                            </div>
-                                            <div class="content fl">
-                                                <p>1.请上传营业执照扫描件</p>
-                                                <p>2.照片要求格式为JPG/JPEG/PNG/GIF，大小不要超过3M</p>
-                                                <a href="#">点击上传</a>
-                                                <input type="file" name="" id="">
-                                            </div>
+                            </div>
+                            <div class="item">
+                                <div class="label red">上传资料</div>
+                                <div class="content">
+                                    <div class="upload-pic clear">
+                                        <div class="pic fl">
+                                            <img src="img/b604d4d2b39540bfd2f2d74519e1d9c4-176+198.jpg" alt="">
+                                        </div>
+                                        <div class="content fl">
+                                            <p>1.请上传营业执照扫描件</p>
+                                            <p>2.照片要求格式为JPG/JPEG/PNG/GIF，大小不要超过3M</p>
+                                            <a href="#">点击上传</a>
+                                            <input type="file" name="" id="">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="label"></div>
-                                    <div class="content">
-                                        <input type="submit" value="提交认证">
-                                    </div>
+                            </div>
+                            <div class="item">
+                                <div class="label"></div>
+                                <div class="content">
+                                    <input type="submit" value="提交认证">
                                 </div>
-                                
+                            </div>
 
-                                
+
+
                         </div>
                     </div>
                 </div>
@@ -107,7 +108,7 @@
     </main>
     <footer class="public-footer">
         <div class="public-footer_contact-us">
-            <div class="container">
+            <div class="container clear">
                 <a href="#">
                     <img src="img/43f3151f5d7f46531e90e3a4e055bf48-32+31.jpg" alt="">
                 </a>
@@ -120,7 +121,7 @@
             </div>
         </div>
         <div class="public-footer_nav">
-            <div class="container">
+            <div class="container clear">
                 <a href="#">隐私政策</a>
                 <a href="#">使用声明</a>
                 <a href="#">法律资料</a>
@@ -130,15 +131,15 @@
             </div>
         </div>
         <div class="public-footer_copy-right">
-            <div class="container">
+            <div class="container clear">
                 Copyright © 2018 MOF FUND基金有限公司。 版权所有，不得转载。
             </div>
         </div>
     </footer>
 
 
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/idangerous.swiper.js"></script>
     <script src="js/js.js"></script>
 </body>
 

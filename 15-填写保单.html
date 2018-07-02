@@ -4,13 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>Bootstrap 101 Template</title>
     <script src="js/sc320.js"></script>
     <link href="css/bootstrap-grid-system.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <!--[if lte IE 9]> <link rel="stylesheet" href="css/ie.css"> <![endif]-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +43,7 @@
             </div>
         </div>
         <div class="public-header_public-nav">
-            <div class="container">
+            <div class="container clear">
                 <div class="public-header_public_nav-left">
                     <a href="#" class="brand">
                         <img src="img/e5299b9c46c0bbad1bcc43f998caa8f1-209+53.png" alt="">
@@ -255,7 +257,7 @@
             <img src="img/6d38a04f126717ac479763cc13187ce0-804+437.jpg" class="visible-xs-block" alt="">
         </div>
         <div class="main-security-details">
-            <div class="container">
+            <div class="container clear">
                 <div class="nav clear">
                     <a href="#" class="fl">首页</a>
                     <a href="#" class="fl">产品</a>
@@ -265,9 +267,9 @@
                 <div class="edit-form">
                     <h3>投保说明</h3>
                     <div class="case-list-btn clear">
-                            <a href="#" class="active">套餐一</a>
-                            <a href="#">套餐二</a>
-                            <a href="#">套餐三</a>
+                        <a href="#" class="active">套餐一</a>
+                        <a href="#">套餐二</a>
+                        <a href="#">套餐三</a>
                     </div>
                     <div class="cost">6300元/年</div>
                     <div class="user-info">
@@ -313,7 +315,7 @@
                                 <h4>出生日期</h4>
                             </div>
                             <div class="col-lg-10 col-md-9 col-sm-8">
-                                <input type="text" value="1995-04-11" class="drop-down">
+                                <input type="text" value="1995-04-11" class="drop-down" id="date">
                                 <span class="tips">（18周岁-60周岁）</span>
                             </div>
                         </div>
@@ -339,7 +341,7 @@
     </main>
     <footer class="public-footer">
         <div class="public-footer_contact-us">
-            <div class="container">
+            <div class="container clear">
                 <a href="#">
                     <img src="img/43f3151f5d7f46531e90e3a4e055bf48-32+31.jpg" alt="">
                 </a>
@@ -352,7 +354,7 @@
             </div>
         </div>
         <div class="public-footer_nav">
-            <div class="container">
+            <div class="container clear">
                 <a href="#">隐私政策</a>
                 <a href="#">使用声明</a>
                 <a href="#">法律资料</a>
@@ -362,16 +364,22 @@
             </div>
         </div>
         <div class="public-footer_copy-right">
-            <div class="container">
+            <div class="container clear">
                 Copyright © 2018 MOF FUND基金有限公司。 版权所有，不得转载。
             </div>
         </div>
     </footer>
 
 
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/idangerous.swiper.js"></script>
+    <script src="js/laydate.js"></script>
     <script src="js/js.js"></script>
+    <script>
+        laydate.render({
+            elem: '#date' //指定元素
+        });
+    </script>
 </body>
 
 </html>

@@ -1255,6 +1255,7 @@ body {
   color: #333;
   text-align: center;
   line-height: 60px;
+  transition: 0.3s;
 }
 .main-security-details .describe .tabs span:hover,
 .main-security-details .describe .tabs span.active {
@@ -1765,6 +1766,14 @@ body {
   padding-left: 0;
   max-width: 100%;
   width: 100%;
+}
+.public-banner {
+  height: 430px;
+}
+.public-banner .swiper-container,
+.public-banner .swiper-wrapper,
+.public-banner .swiper-slide {
+  height: 100%;
 }
 
 /*# sourceMappingURL=common.css.map */
